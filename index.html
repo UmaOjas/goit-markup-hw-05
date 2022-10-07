@@ -25,19 +25,19 @@
             ><span>Web</span>Studio</a
           >
           <ul class="list header-list">
-            <li>
+            <li class="header-item">
               <a
                 class="link header-link header-item current"
                 href="./index.html"
                 >Студія</a
               >
             </li>
-            <li>
+            <li class="header-item">
               <a class="link header-link header-item" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
-            <li>
+            <li class="header-item">
               <a class="link header-link header-item" href="#">Контакти</a>
             </li>
           </ul>
@@ -69,7 +69,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-button">Замовити послугу</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="text">
@@ -131,28 +133,37 @@
           <h2 class="studio-title category-title">Чим ми займаємося</h2>
           <ul class="list category-list">
             <li class="category-item">
-              <img
-                class="category-pic"
-                src="./images/htmlcss.jpg"
-                alt="Верстка сайту"
-                width="370"
-              />
+              <div class="category-pic">
+                <img
+                  class="category-pic"
+                  src="./images/htmlcss.jpg"
+                  alt="Верстка сайту"
+                  width="370"
+                />
+                <p class="category-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="category-item">
-              <img
-                class="category-pic"
-                src="./images/design.jpg"
-                alt="Дизайн"
-                width="370"
-              />
+              <div class="category-pic">
+                <img
+                  class="category-pic"
+                  src="./images/design.jpg"
+                  alt="Дизайн"
+                  width="370"
+                />
+                <p class="category-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="category-item">
-              <img
-                class="category-pic"
-                src="./images/colour.jpg"
-                alt="Колористика"
-                width="370"
-              />
+              <div class="category-pic">
+                <img
+                  class="category-pic"
+                  src="./images/colour.jpg"
+                  alt="Колористика"
+                  width="370"
+                />
+                <p class="category-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -519,5 +530,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <bottom class="close-btn" data-modal-close>
+          <svg class="close-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </bottom>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
